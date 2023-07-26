@@ -1,0 +1,35 @@
+<section>
+    <!--for demo wrap-->
+    <h1>Top trending videos</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Likes</th>
+            <th>Views</th>
+            <th>Comments</th>
+            <th>Published at</th>
+            <th>Days to be trend</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td> {{  datum.title }}  </td>
+            <td> {{  datum.likes  }}  </td>
+            <td> {{  datum.view_count  }} </td>
+            <td> {{  datum.comment_count  }} </td>
+
+            <td> {{  datum.publishedAt  }} </td>
+            <td>{{datum.trending_time}}</td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>

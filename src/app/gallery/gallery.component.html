@@ -1,0 +1,24 @@
+<section id="gallery" class="gallery">
+    <h1 class="text-center mb-5">Video Gallery</h1>
+
+    <div class="container-fluid">
+      
+      <div class="row gy-4 justify-content-center own-gallery overflow-auto mx-4">
+        
+        
+        <div class="col-xl-3 col-lg-4 col-md-6 justify-content-center" *ngFor="let datum of data" >
+          <div class="gallery-item h-100">
+            <img src="{{datum.thumbnail_link}}"  class="img-fluid own-image" alt="foto">
+            <div class="gallery-links d-flex align-items-center justify-content-center">
+              <!-- <a href="{{datum.thumbnail_link}}" title="{{datum.title}}" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a> -->
+              <a href="https://www.youtube.com/watch?v={{datum.video_id}}" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+            <div>{{ datum.title }} </div>
+          </div>
+        </div><!-- End Gallery Item -->
+        
+        
+      </div>
+      
+    </div>
+  </section><!-- End Gallery Section -->
